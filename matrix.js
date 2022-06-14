@@ -3,6 +3,7 @@ class Matrix{
         this.rows = rows;
         this.cols = cols;
         this.data = [];
+        //the following for loop will automaticaly fill the matrix with zeros.
         for (let i = 0; i < this.rows; i++) {
             this.data[i] = [];
             for (let j = 0; j < this.cols; j++) {
@@ -13,6 +14,7 @@ class Matrix{
     copy(){
         return this;
     }
+    //fromArray method will create column Matrix 
     static fromArray(array){
         let mrx = new Matrix(array.length,1);
         for(let i = 0; i< array.length; i++){
@@ -20,7 +22,7 @@ class Matrix{
         }
         return mrx;
     }
-    
+    //convert Matrix to Array
     toArray(){
         let arr = [];
         for (let i = 0; i < this.rows; i++) {
@@ -30,7 +32,7 @@ class Matrix{
         }
         return arr;
     }
-
+    //randomize() fill the MAtrix  with random numbers between 1 and -1
     randomize(){
         return this.map(e => Math.random() * 2 - 1);
     }
