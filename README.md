@@ -1,2 +1,2 @@
 # MatrixJs
-A small library for matrix Math.
+A small JS library for Matrix Math.
