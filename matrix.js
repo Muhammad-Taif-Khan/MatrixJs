@@ -139,49 +139,8 @@ remove(row=0,col=0){
     return result;
 }
 
-// determinant(){
-//     if(this.rows === this.cols){
+// required a metahod for determenant
 
-// //find determinant of 2x 2 matrix function
-//         function twoByTwoMatrixDet(mtx){
-               
-//             let first_diag = mtx.data[0][0]*mtx.data[1][1];
-//             let sec_diag = mtx.data[0][1]*mtx.data[1][0];
-//             return first_diag-sec_diag; 
-//         }
-
-//         let result=0;
-//         //if it is 1x1 matrix
-//         if(this.rows === 1){
-//             result=this.data[0][0];
-//         }
-//         //if it is 2x2 matrix
-//         else if(this.rows === 2){
-//            twoByTwoMatrixDet(this);
-//         }
-//         //if it is matrix mxn > 2x2 
-//         //[
-//         //     1  2  3   1|5 6|
-//         //               |8 9|
-//         //     4  5  6
-//         //     7  8  9
-//         //]
-//         else if(this.rows > 2){
-//             let first_row = this.data[0];
-                
-
-//             first_row.forEach((elm,i) =>{
-//                 // result += elm*twoByTwoMatrixDet(this.remove(1,i+1));
-//             });
-
-//             console.log(first_row);
-//         }
-//         //  console.log(result);
-//         this.print();
-//         return;
-//     }
-//     throw new Error('Determinant of a Matrix is only applicable if it is a square Matrix!');
-// }
     print(){
         console.table(this.data);
     }
