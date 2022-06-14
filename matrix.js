@@ -1,4 +1,4 @@
-class Matrix{
+export class Matrix{
     constructor(rows,cols){
         this.rows = rows;
         this.cols = cols;
@@ -139,15 +139,9 @@ remove(row=0,col=0){
     return result;
 }
 
-// required a metahod for determenant
+// required a metahod for determinant
 
     print(){
         console.table(this.data);
     }
 }
-
-
-
-let matrixA = new Matrix(3,3);
-
-matrixA.print();
