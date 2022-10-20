@@ -39,8 +39,7 @@ export class Matrix{
 
    static subtract(a,b){
     if (a.rows !== b.rows || a.cols !== b.cols) {
-        console.log('Columns and Rows of A must match Columns and Rows of B.');
-        return;
+        throw new Error('Columns and Rows of A must match Columns and Rows of B.');
       }
   
       // Return a new Matrix a-b
@@ -51,8 +50,7 @@ export class Matrix{
     add(n){
         if (n instanceof Matrix) {
             if (this.rows !== n.rows || this.cols !== n.cols) {
-              console.log('Columns and Rows of A must match Columns and Rows of B.');
-              return;
+              throw new Error('Columns and Rows of A must match Columns and Rows of B.');
             }
             return this.map((e, i, j) => e + n.data[i][j]);
           } else {
@@ -71,8 +69,7 @@ export class Matrix{
     //Matrix multiplication
     static multiply(a,b){
         if(a.cols !== b.rows){
-            console.error("Cols of 'A' must be equal to Rows of 'B'!");
-            return undefined;
+            throw new Error("Cols of 'A' must be equal to Rows of 'B'!");
         }
 
         return new Matrix(a.rows, b.cols).map((e, i, j) => {
